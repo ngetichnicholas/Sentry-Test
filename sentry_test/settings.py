@@ -45,7 +45,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sentry_test_app',
+    'celery',
+    'django_celery_results', 
+    'django_celery_beat',
 ]
+
+"""
+django_celery_results:
+This extension enables you to store Celery task results using the Django ORM.
+"""
+"""
+django_celery_beat:
+This extension enables you to store the periodic task schedule in the database.
+The periodic tasks can be managed from the Django Admin interface, where you can create, edit and delete periodic tasks and how often they should run.
+"""
 
 import sentry_sdk
 sentry_sdk.init("http://a4f0fe90ab6f451bbe8757824a0ec0a6@127.0.0.1:880/1")
